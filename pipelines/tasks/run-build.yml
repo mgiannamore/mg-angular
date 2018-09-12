@@ -14,5 +14,6 @@ run:
   args:
     - -exc
     - |
-      chmod 755 ./mg-angular/pipelines/tasks/run-build.sh
-      ./mg-angular/pipelines/tasks/run-build.sh
+      ng build --prod --aot
+      cd dist && touch Staticfile
+      echo 'pushstate: enabled' > Staticfile
