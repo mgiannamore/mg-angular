@@ -21,6 +21,7 @@ jobs:
     trigger: true
   - task: run-build
     file: marcus-angular/pipelines/tasks/run-build.yml
+    privileged: true
   - put: bazaz-demo-cf
     params:
       path: marcus-angular/
