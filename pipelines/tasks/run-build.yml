@@ -1,5 +1,8 @@
 ---
 platform: linux
 
+inputs:
+- path: marcus-angular
+
 run:
   path: marcus-angular/pipelines/tasks/run-build.sh
