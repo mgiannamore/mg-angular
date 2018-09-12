@@ -3,11 +3,16 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source:
-    repository: ubuntu
+  source: {repository: ubuntu}
 
 inputs:
 - name: marcus-angular
 
 run:
   path: marcus-angular/pipelines/tasks/run-build.sh
+  args:
+    - -exc
+    - |
+      ng build --prod --aot
+      cd dist && touch Staticfile
+      echo 'pushstate: enabled' > Staticfile
