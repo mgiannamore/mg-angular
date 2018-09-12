@@ -9,6 +9,9 @@ image_resource:
 inputs:
 - name: marcus-angular
 
+outputs:
+- name: compiled-marcus-angular
+
 run:
   path: sh
   args:
@@ -16,3 +19,9 @@ run:
     - |
       cd marcus-angular
       npm install
+      ng-build --prod --aot
+      cd dist && touch Staticfile
+      echo 'pushstate:enabled' > Staticfile
+      cp -R dist ../../compiled-marcus-angular/
+      cd ../../compiled-marcus-angular
+      ls
