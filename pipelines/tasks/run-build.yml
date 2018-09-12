@@ -16,3 +16,5 @@ run:
     - |
       pwd
       ls
+      cd marcus-angular
+      ls
