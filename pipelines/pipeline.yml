@@ -1,0 +1,26 @@
+resources:
+- name: marcus-angular
+  type: git
+  source:
+    uri: https://github.com/mgiannamore/mg-angular
+    branch: master
+- name: bazaz-demo-cf
+  type: cf
+  source:
+    api: https://api.sys.gn01.pcf.dcsg.com
+    username: ((cf_user_nonprod))
+    password: ((cf_password_nonprod))
+    organization: bazaz-demo
+    space: dev
+    skip_cert_check: true
+
+jobs:
+- name: build-and-push
+  plan:
+  - get: marcus-angular
+    trigger: true
+  - task: run-build
+    file: marcus-angular/pipelines/tasks/run-build.yml
+  - put: bazaz-demo-cf
+    params:
+      path: marcus-angular/
