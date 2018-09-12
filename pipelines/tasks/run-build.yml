@@ -9,6 +9,6 @@ inputs:
 - name: marcus-angular
 
 run:
-  path: marcus-angular/pipleines/tasks/run-build.sh
+  path: marcus-angular/pipelines/tasks/run-build.sh
   args:
     - -exc
