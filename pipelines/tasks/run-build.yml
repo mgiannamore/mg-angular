@@ -9,7 +9,7 @@ inputs:
 - name: marcus-angular
 
 run:
-  path: bash
+  path: ng
   args:
-  - |
-    ng build --prod --aot
+  -
+    build --prod --aot
