@@ -7,12 +7,12 @@ image_resource:
     repository: pivotalpa/angular-cli
 
 inputs:
-- name: marcus-angular
+- name: pipelines
 
 run:
   path: sh
   args:
     - -exc
     - |
-      chmod 755 marcus-angular/pipelines/tasks/run-build.sh
-      marcus-angular/pipelines/tasks/run-build.sh
+      chmod 755 pipelines/tasks/run-build.sh
+      pipelines/tasks/run-build.sh
