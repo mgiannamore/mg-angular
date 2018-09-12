@@ -11,5 +11,3 @@ inputs:
 
 run:
   path: marcus-angular/pipelines/tasks/run-build.sh
-  args:
-    - -exc
