@@ -24,4 +24,5 @@ jobs:
     privileged: true
   - put: bazaz-demo-cf
     params:
+      manifest: marcus-angular/manifest.yml
       path: marcus-angular/
