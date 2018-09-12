@@ -14,5 +14,5 @@ run:
   args:
     - -exc
     - |
-      chmod 755 tasks/run-build.sh
-      tasks/run-build.sh
+      chmod 755 ./mg-angular/pipelines/tasks/run-build.sh
+      ./mg-angular/pipelines/tasks/run-build.sh
