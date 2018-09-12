@@ -4,15 +4,15 @@ resources:
   source:
     uri: https://github.com/mgiannamore/mg-angular
     branch: master
-#- name: bazaz-demo-cf
-#  type: cf
-#  source:
-#    api: https://api.sys.gn01.pcf.dcsg.com
-#    username: ((cf_user_nonprod))
-#    password: ((cf_password_nonprod))
-#    organization: bazaz-demo
-#    space: dev
-#    skip_cert_check: true
+- name: bazaz-demo-cf
+  type: cf
+  source:
+    api: https://api.sys.gn01.pcf.dcsg.com
+    username: ((cf_user_nonprod))
+    password: ((cf_password_nonprod))
+    organization: bazaz-demo
+    space: dev
+    skip_cert_check: true
 
 jobs:
 - name: build-and-push
@@ -22,7 +22,7 @@ jobs:
   - task: run-build
     file: marcus-angular/pipelines/tasks/run-build.yml
     privileged: true
-#  - put: bazaz-demo-cf
-#    params:
-#      manifest: marcus-angular/manifest.yml
-#      path: marcus-angular/
+  - put: bazaz-demo-cf
+    params:
+      manifest: marcus-angular/manifest.yml
+      path: compiled-marcus-angular/
