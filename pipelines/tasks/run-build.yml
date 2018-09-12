@@ -10,6 +10,9 @@ inputs:
 - name: marcus-angular
 
 run:
-  path: marcus-angular/marcus-angular/pipelines/tasks/run-build.sh
+  path: sh
   args:
     - -exc
+    - |
+      chmod 755 marcus-angular/pipelines/tasks/run-build.sh
+      marcus-angular/pipelines/tasks/run-build.sh
