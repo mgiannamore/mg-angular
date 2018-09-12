@@ -3,6 +3,9 @@ platform: linux
 
 image_resource:
   type: docker-image
+  source:
+    repository: weboaks/node-karma-protractor-chrome
+    tag: "latest"
 
 inputs:
 - name: marcus-angular
