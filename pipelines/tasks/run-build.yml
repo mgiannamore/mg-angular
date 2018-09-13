@@ -19,7 +19,7 @@ run:
     - |
       cd marcus-angular
       npm install
-      ng build --prod --aot
+      ng build --prod --aot --base-href="/dist"
       cd dist && touch Staticfile
       echo 'pushstate:enabled' > Staticfile
       cd ..
