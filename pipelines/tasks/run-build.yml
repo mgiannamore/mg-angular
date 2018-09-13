@@ -9,9 +9,6 @@ image_resource:
 inputs:
 - name: marcus-angular
 
-#outputs:
-#- name: compiled-marcus-angular
-
 run:
   path: sh
   args:
@@ -24,9 +21,3 @@ run:
       echo 'pushstate:enabled' > Staticfile
       cd ..
       cp -R dist ../../compiled-marcus-angular
-      cd ..
-      pwd
-      ls
-      cd ..
-      pwd
-      ls
