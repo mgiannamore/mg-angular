@@ -17,6 +17,7 @@ run:
   args:
     - -exc
     - |
+      cd ..
       ls
 #      cd marcus-angular
 #      npm install
