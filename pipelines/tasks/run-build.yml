@@ -17,10 +17,11 @@ run:
   args:
     - -exc
     - |
-      cd marcus-angular
-      npm install
-      ng build --prod --aot
-      cd dist && touch Staticfile
-      echo 'pushstate:enabled' > Staticfile
-      cd ..
-      cp -R dist ~/compiled-marcus-angular
+      ls
+#      cd marcus-angular
+#      npm install
+#      ng build --prod --aot
+#      cd dist && touch Staticfile
+#      echo 'pushstate:enabled' > Staticfile
+#      cd ..
+#      cp -R dist ~/compiled-marcus-angular
