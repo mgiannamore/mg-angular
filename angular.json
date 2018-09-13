@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-dream-app": {
+    "marcus-angular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -51,19 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-dream-app:build",
-            "port": 4200
+            "browserTarget": "marcus-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-dream-app:build:production"
+              "browserTarget": "marcus-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-dream-app:build"
+            "browserTarget": "marcus-angular:build"
           }
         },
         "test": {
@@ -97,7 +96,7 @@
         }
       }
     },
-    "my-dream-app-e2e": {
+    "marcus-angular-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -105,11 +104,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-dream-app:serve"
+            "devServerTarget": "marcus-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-dream-app:serve:production"
+              "devServerTarget": "marcus-angular:serve:production"
             }
           }
         },
@@ -125,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "my-dream-app"
+  "defaultProject": "marcus-angular"
 }
