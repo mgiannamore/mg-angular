@@ -1,2 +1,3 @@
 applications:
 - name: marcus-angular
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
