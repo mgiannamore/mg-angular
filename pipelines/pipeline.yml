@@ -25,4 +25,4 @@ jobs:
   - put: bazaz-demo-cf
     params:
       manifest: marcus-angular/manifest.yml
-      path: compiled-marcus-angular/
+      path: compiled-marcus-angular/dist/
