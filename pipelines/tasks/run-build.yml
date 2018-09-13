@@ -20,4 +20,4 @@ run:
       cd dist && touch Staticfile
       echo 'pushstate:enabled' > Staticfile
       cd ..
-      cp -R dist ../../compiled-marcus-angular
+      cp -R dist ../compiled-marcus-angular
